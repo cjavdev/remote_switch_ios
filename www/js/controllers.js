@@ -34,11 +34,12 @@ angular.module('starter.controllers', [])
 })
 
 .controller('DevicesCtrl', function($scope) {
-  $scope.playlists = [
+  $scope.devices = [
     { title: 'Truckee Airport', id: 1 },
     { title: 'San Jose Airport', id: 2 },
   ];
 })
 
-.controller('DeviceCtrl', function($scope, $stateParams) {
+.controller('DeviceCtrl', function($scope, $stateParams, DeviceService) {
+  $scope.device = DeviceService.getDevice($stateParams.deviceId);
 });

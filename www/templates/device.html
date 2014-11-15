@@ -1,5 +1,36 @@
 <ion-view title="Device">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
   <ion-content class="has-header">
-    <h1>Truckee Airport</h1>
+  <div class="list card">
+    <div class="item item-icon-left">
+      <i class="icon ion-thermometer"></i>
+      <h2>{{device.title}}</h2>
+      <p>Current Temp: {{device.currentTemp}} F</p>
+    </div>
+
+    <div class="item item-body">
+      <h3>Set Point</h3>
+      <label class="item item-input">
+        <i class="icon ion-pinpoint placeholder-icon"></i>
+        <input type="text" placeholder="Set Point">
+      </label>
+      <button class="button button-block button-assertive">
+        Set!
+      </button>
+    </div>
+
+    <div class="item">
+
+      <h3>Manual</h3>
+      <label class="toggle">
+        <input type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+  </div>
   </ion-content>
-</ion-view>
+  </ion-view>
